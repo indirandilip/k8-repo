@@ -1,6 +1,6 @@
 # kubectl apply -f rs.yaml 
 
-# kubectl get replicaset or rs 
+# kubectl get replicaset or rs -A
 
 # kubectl get pods -A
 
