@@ -1,0 +1,11 @@
+# kubectl apply -f rs.yaml 
+
+# kubectl get replicaset or rs 
+
+# kubectl get pods -A
+
+# kubectl scale --replicas=2 -f rs.yaml
+
+# kubectl scale --replicas=5 rs/nginx-replicaset -n k8
+
+# kubectl delete -f nginx.yaml

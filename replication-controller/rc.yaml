@@ -1,0 +1,20 @@
+
+# Deploy pods in Replication-controller
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-rc
+  namespace: k8
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.18

@@ -1,0 +1,5 @@
+# kubectl apply -f nginx.yaml    --- used for Create and Delete Objects 
+
+# kubectl get replicaset         -----  in the name of deployment
+
+# kubectl get all                ------------ where you will get all details like deployment, replicaset,

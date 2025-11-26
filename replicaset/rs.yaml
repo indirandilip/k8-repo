@@ -1,0 +1,26 @@
+#- replicaset is newer version of replicationcontroller
+#- which will have selector additionally 
+#- which manages existing pod also which haven;t created through Replica set.
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+  namespace: k8
+  labels:
+    app: nginx1
+spec:
+  replicas: 3  # Number of desired pod replicas
+  selector:
+    matchLabels:
+      app: nginx1
+  template:
+    metadata:
+      labels:
+        app: nginx1  # Must match the selector above
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.18
+        ports:
+        - containerPort: 80
