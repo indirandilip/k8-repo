@@ -1,3 +1,5 @@
+# kubectl create -f pod.yaml
+
 # kubectl get pods -A
 
 # kubectl get pods -A -o wide
