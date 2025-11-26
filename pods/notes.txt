@@ -1,0 +1,19 @@
+Module 1 : POD Creation using YAML File
+----------
+
+apiVersion: 
+kind: 
+metadata:
+
+spec: 
+
+--------------------------------------------
+apiVersion: v1  or apps/v1 
+
+kind : pod , service, Deployment, replicaset or replicationcontroller 
+
+metadata: name of the pod / labels --- Dev / Prod / testing
+
+spec: image name / replicaset 
+
+-------------------------------------------
