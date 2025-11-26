@@ -1,0 +1,17 @@
+- enables communication between various components within / outside of application
+- each pod will have its own service. 
+
+Traffic Routing:
+1. NodePort
+2. ClusterIP
+3. Load Balancer
+4. Ingress: 
+
+ClusterIP (default) - Exposes the Service on an internal IP in the cluster. This type makes the Service only reachable from within the cluster.
+
+NodePort - Exposes the Service on the same port of each selected Node in the cluster using NAT. Makes a Service accessible from outside the cluster using <NodeIP>:<NodePort>. Superset of ClusterIP.
+
+LoadBalancer - Creates an external load balancer in the current cloud (if supported) and assigns a fixed, external IP to the Service. Superset of NodePort.
+
+
+1. NodePort - 30,000 – 32,767 port # used

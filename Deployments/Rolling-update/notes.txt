@@ -1,0 +1,8 @@
+Managing Application lifecycle:
+------------------------------
+Deployment:
+
+- recreate   ----- Takes down all old Pods before starting new ones. Results in downtime. 
+- update     ----- Updates Pods gradually, replacing them one by one. Ensures zero downtime.
+- rollout    ----- pause, resume, undo the changes. 
+- versioning ----- images changes, version.  

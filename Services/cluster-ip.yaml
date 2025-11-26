@@ -1,0 +1,22 @@
+# pods are group together. 
+# The service is only needed by other internal services. to talk internal not external. 
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: k8
+  labels:
+    app: nginx1-dep
+spec:
+  type: ClusterIP   # Default; can be omitted
+  selector:
+    app: nginx1-dep
+  ports:
+    - protocol: TCP
+      port: 80         # Service port inside the cluster
+      targetPort: 80   # Container port
+
+# ------------------------------------------------------------------
+
