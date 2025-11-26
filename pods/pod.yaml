@@ -13,4 +13,19 @@ spec:
   - name: nginx 
     image: nginx:1.18
 
-    
+
+
+# Create a POD in namespace:
+
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: demo-pod
+  namespace: my-namespace
+  labels:
+    app: demo
+    type: front-end
+spec: 
+  containers:
+  - name: nginx-demo 
+    image: nginx:1.20 
