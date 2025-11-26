@@ -3,3 +3,5 @@
 # kubectl get pods -A
 
 # kubectl get pods -A -o wide
+
+# kubectl delete -f pod.yaml
