@@ -1,0 +1,17 @@
+# values.yaml
+image:
+  repository: hashicorp/http-echo
+  tag: "0.2.3"
+
+blue:
+  replicas: 3
+  text: "blue-v1"
+
+green:
+  replicas: 3
+  text: "green-v1"
+
+service:
+  type: NodePort        # can be ClusterIP, NodePort, LoadBalancer
+  selector: blue        # start with blue receiving traffic
+  nodePort: 30080       # used only if type == NodePort
