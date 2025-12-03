@@ -1,0 +1,47 @@
+Helm installtion:
+
+# curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+# helm version
+
+To create Helm chart: 
+
+# helm create <helm chart folder>
+
+# helm create my-app-chart
+
+# cd my-app-chart
+
+# kubectl create namespace dev
+
+# helm lint ./my-app-chart   ---- YAML syntax errors / Missing fields /Incorrect template syntax /Bad indentation /Wrong values references
+
+
+# helm template my-app ./my-app-chart --namespace dev     ---- for Dry run / Produces pure Kubernetes manifests, without installing them
+
+
+# helm install <Release> <chart-folder> -n <namespace>
+
+# helm install my-app ./my-app-chart -n dev
+
+Upgrade to new version: 
+
+# helm upgrade my-app ./my-app-chart -n dev --set service.selector=green
+
+To Check Status: 
+----------------
+
+# helm status my-app -n dev
+
+To Check History: 
+----------------
+
+# helm history my-app -n dev
+
+Roll back:
+---------
+
+# helm rollback <release> <REVISION> -n namespace --wait --timeout 5m
+
+
+# helm rollback my-app 1 -n dev --wait --timeout 5m
