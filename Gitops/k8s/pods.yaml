@@ -1,0 +1,14 @@
+# Create a POD in namespace:
+
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: demo-pod
+  namespace: gitops-ns
+  labels:
+    app: demo
+    type: front-end
+spec: 
+  containers:
+  - name: nginx-demo 
+    image: nginx:1.20
